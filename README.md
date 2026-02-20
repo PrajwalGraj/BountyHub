@@ -55,19 +55,10 @@ An Algorand **smart contract–powered bounty escrow system** that:
 ### 🌐 Live Frontend
 **Your Live URL:** [Update with your Vercel/hosted URL](https://your-live-demo-url.com)
 
-### 🎥 Demo Video (LinkedIn)
-**LinkedIn Demo Video (2–3 min):**  
+### 🎥 Demo Video
+ 
 [Update with your LinkedIn video URL](https://linkedin.com/your-demo-video-link)
 
-**Video includes:**
-- ✅ Live Testnet interaction
-- ✅ Smart contract calls  
-- ✅ Escrow funding
-- ✅ Work submission & approval
-- ✅ Payout logic
-- ✅ Architecture explanation
-
-**Tagged:** https://www.linkedin.com/company/rift-pwioi/
 
 ### 🧾 Smart Contract (Testnet)
 
@@ -185,8 +176,8 @@ Built using:
 │  │  │  Bounty App Contract                       │    │   │
 │  │  │  • create_bounty(amount)                   │    │   │
 │  │  │  • claim_bounty()                          │    │   │
+│  │  │  • submit_work()                           │    │   │
 │  │  │  • approve_bounty()                        │    │   │
-│  │  │  • cancel_bounty()                         │    │   │
 │  │  └────────────────────────────────────────────┘    │   │
 │  │                                                      │   │
 │  └──────────────────────────────────────────────────────┘   │
@@ -267,7 +258,6 @@ Creator → Frontend → Call approve()
 ### Prerequisites
 - **Node.js** 16+ with npm/pnpm
 - **Python** 3.10+ with Poetry
-- **Algorand Sandbox** or Algonode access
 - **Pera Wallet** or **MyAlgo Wallet** browser extension
 
 ### Step 1: Clone Repository
@@ -315,7 +305,6 @@ poetry run python -m smart_contracts.bounty.deploy_config
 poetry run algokit deploy testnet
 ```
 
-**Note:** Save the **App ID** from deployment output for submission.
 
 ### Step 6: Start Frontend Development Server
 
@@ -323,8 +312,6 @@ poetry run algokit deploy testnet
 cd ../frontend
 pnpm dev
 ```
-
-Access at: **http://localhost:5174**
 
 ---
 
@@ -520,23 +507,6 @@ Uses official Algorand toolkit:
 | **Cost** | $0.001 per transaction (vs. 20-30% platform fee) |
 | **Ownership** | User controls their keys, not platform |
 
----
-
-## �📸 Screenshots
-
-### Home Page
-![Home Page](./projects/frontend/public/screenshots/home.png)
-
-### Create Bounty Modal
-![Create Bounty](./projects/frontend/public/screenshots/create-bounty.png)
-
-### All Bounties View
-![All Bounties](./projects/frontend/public/screenshots/all-bounties.png)
-
-### My Bounties View
-![My Bounties](./projects/frontend/public/screenshots/my-bounties.png)
-
----
 
 
 ```typescript
