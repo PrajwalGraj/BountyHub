@@ -1,4 +1,9 @@
 {
+	"scripts": {
+		"build": "cd projects/frontend && pnpm run build",
+		"dev": "cd projects/frontend && pnpm run dev",
+		"install:frontend": "cd projects/frontend && pnpm install"
+	},
 	"devDependencies": {
 		"@types/node": "^25.3.0"
 	}
